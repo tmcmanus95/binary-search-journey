@@ -8,18 +8,37 @@ body {
 }
 
 #title {
-  border-bottom: 5px;
+  border-bottom: 5px solid black;
 }
 #main {
   text-align: center;
 }
+
 #guesses-container {
   text-align: center;
+}
+
+h2 {
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .fade-in {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
+}
+
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  background-color: darkseagreen;
+  color: #fff;
+  border: 1px solid darkseagreen;
+  border-radius: 4px;
+  transition: background-color 0.3s;
 }
 
 @keyframes fadeIn {

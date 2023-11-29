@@ -14,7 +14,7 @@ function binarySearch() {
   const target = getRandomInt(1000000);
 
   let bottom = 0;
-  let top = array.length - 1;
+  let top = array.length;
   let guessNumber = 0;
   let rangeLine = document.createElement("h2");
   rangeLine.textContent = `Starting range: ${bottom} - ${top}`;
@@ -55,7 +55,7 @@ function binarySearch() {
       const tooLowLine = document.createElement("h2");
       tooLowLine.style.backgroundColor = "lightblue";
       tooLowLine.classList.add("fade-in");
-      tooLowLine.textContent = `Guess ${guessNumber}: ${middle} - Too low`;
+      tooLowLine.textContent = `Guess ${guessNumber}: ${array[middle]} - Too low`;
       const newRangeLine = document.createElement("h4");
       newRangeLine.classList.add("fade-in");
 
@@ -76,7 +76,7 @@ function binarySearch() {
       guessNumber++;
       const tooHighLine = document.createElement("h2");
       console.log(`guess ${guessNumber}'s middle is ${middle}`);
-      tooHighLine.textContent = `Guess ${guessNumber}: ${middle} - Too high`;
+      tooHighLine.textContent = `Guess ${guessNumber}: ${array[middle]} - Too high`;
       tooHighLine.style.backgroundColor = "salmon";
       tooHighLine.classList.add("fade-in");
       const newRangeLine = document.createElement("h4");

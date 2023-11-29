@@ -1,8 +1,7 @@
 # Binary Search Journey
+A site that helps visualize the steps of a binary search function by generating a random number between 0 and 100,000, and showing each guess and subsequent shortening of range that the binary search function undertakes. 
 
-A site that helps visualize the steps of a binary search function by generating a random number between 0 and 100,000, and showing each guess and subsequent shortening of range that the binary search function undertakes.
-
-# Application Link
+# Application Link 
 
 https://tmcmanus95.github.io/binary-search-journey/
 
@@ -12,7 +11,7 @@ https://tmcmanus95.github.io/binary-search-journey/
 
 <img width="447" alt="Screenshot 2023-11-28 at 6 56 00 PM" src="https://github.com/tmcmanus95/binary-search-journey/assets/122508345/c4144b93-1567-425c-9eff-cb3e1ff634cd">
 
-# License
+# License 
 
 Copyright 2023 tmcmanus95
 

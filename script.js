@@ -19,7 +19,7 @@ function binarySearch() {
   console.log(`top: ${top} | bottom ${bottom}`);
   let guessNumber = 0;
   let rangeLine = document.createElement("h2");
-  rangeLine.textContent = `Starting range: ${bottom} - ${top}`;
+  rangeLine.textContent = `Starting range: ${bottom} - ${top + 1}`;
   rangeLine.style.backgroundColor = "lemonchiffon";
   let targetLine = document.createElement("h1");
   let targetSpan = document.createElement("span");
@@ -75,7 +75,7 @@ function binarySearch() {
       bottom = middle + 1;
       console.log(`after increment bottom : ${bottom}`);
 
-      newRangeLine.textContent = `\n\nNew Range: ${bottom + 1} - ${top}`;
+      newRangeLine.textContent = `\n\nNew Range: ${bottom + 1} - ${top + 1}`;
     } else {
       guessNumber++;
       const tooHighLine = document.createElement("h2");
@@ -97,7 +97,7 @@ function binarySearch() {
       console.log(`before increment top : ${top}`);
       top = middle - 1;
       console.log(`after increment top : ${top}`);
-      newRangeLine.textContent = `\n\nNew Range: ${bottom} - ${top + 1}`;
+      newRangeLine.textContent = `\n\nNew Range: ${bottom + 1} - ${top + 1}`;
     }
   }
 

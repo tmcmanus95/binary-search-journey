@@ -63,12 +63,13 @@ function binarySearch() {
       setTimeout(() => {
         newRangeLine.style.opacity = 1;
       }, 100 * guessNumber);
-
+      console.log(`before increment bottom : ${bottom}`);
       bottom = middle + 1;
-      newRangeLine.textContent = `\n\nNew Range: ${bottom} - ${top}`;
-    } else {
+      console.log(`after increment bottom : ${bottom}`);
       guessNumber++;
 
+      newRangeLine.textContent = `\n\nNew Range: ${bottom} - ${top}`;
+    } else {
       const tooHighLine = document.createElement("h2");
       console.log(`guess ${guessNumber}'s middle is ${middle}`);
       tooHighLine.textContent = `Guess ${guessNumber}: ${middle} - Too high`;
@@ -85,8 +86,10 @@ function binarySearch() {
       setTimeout(() => {
         newRangeLine.style.opacity = 1;
       }, 100 * guessNumber);
-
+      console.log(`before increment top : ${top}`);
       top = middle - 1;
+      console.log(`after increment top : ${top}`);
+      guessNumber++;
       newRangeLine.textContent = `\n\nNew Range: ${bottom} - ${top}`;
     }
   }

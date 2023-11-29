@@ -19,7 +19,7 @@ function binarySearch() {
   console.log(`top: ${top} | bottom ${bottom}`);
   let guessNumber = 0;
   let rangeLine = document.createElement("h2");
-  rangeLine.textContent = `Starting range: ${bottom} - ${top + 1}`;
+  rangeLine.textContent = `Starting range: 1 - 1000000`;
   rangeLine.style.backgroundColor = "lemonchiffon";
   let targetLine = document.createElement("h1");
   let targetSpan = document.createElement("span");
@@ -36,10 +36,7 @@ function binarySearch() {
 
   while (bottom <= top) {
     let middle = Math.floor((top + bottom) / 2);
-    console.log("The is my starting middle ", middle);
     let guess = array[middle];
-    console.log("array[middle]: ", array[middle]);
-    console.log("middle: ", middle);
 
     if (guess === target) {
       let hoorayLine = document.createElement("h1");
@@ -71,15 +68,12 @@ function binarySearch() {
       setTimeout(() => {
         newRangeLine.style.opacity = 1;
       }, 100 * guessNumber);
-      console.log(`before increment bottom : ${bottom}`);
       bottom = middle + 1;
-      console.log(`after increment bottom : ${bottom}`);
 
       newRangeLine.textContent = `\n\nNew Range: ${bottom + 1} - ${top + 1}`;
     } else {
       guessNumber++;
       const tooHighLine = document.createElement("h2");
-      console.log(`guess ${guessNumber}'s middle is ${middle}`);
       tooHighLine.textContent = `Guess ${guessNumber}: ${guess} - Too high`;
       tooHighLine.style.backgroundColor = "salmon";
       tooHighLine.classList.add("fade-in");
@@ -94,9 +88,7 @@ function binarySearch() {
       setTimeout(() => {
         newRangeLine.style.opacity = 1;
       }, 100 * guessNumber);
-      console.log(`before increment top : ${top}`);
       top = middle - 1;
-      console.log(`after increment top : ${top}`);
       newRangeLine.textContent = `\n\nNew Range: ${bottom + 1} - ${top + 1}`;
     }
   }

@@ -12,7 +12,7 @@ function binarySearch() {
     return Math.floor(Math.random() * max);
   }
 
-  const target = getRandomInt(1000000);
+  const target = getRandomInt(array.length);
 
   let bottom = 0;
   let top = array.length - 1;

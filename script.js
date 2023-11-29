@@ -6,9 +6,11 @@ const newRandomNumberButton = document.querySelector(
 function binarySearch() {
   guessContainer.textContent = "";
   const array = Array.from({ length: 1000000 }, (_, index) => index + 1);
+
   function getRandomInt(max) {
     return Math.floor(Math.random() * max);
   }
+
   const target = getRandomInt(1000000);
 
   let bottom = 0;
@@ -29,10 +31,12 @@ function binarySearch() {
   guessContainer.appendChild(targetLine);
 
   guessContainer.appendChild(rangeLine);
+
   while (bottom <= top) {
     let middle = Math.floor((top + bottom) / 2);
-    console.log("Thei is my starting middle ", middle);
+    console.log("The is my starting middle ", middle);
     let guess = array[middle];
+
     if (guess === target) {
       let hoorayLine = document.createElement("h1");
       hoorayLine.textContent = `Guess ${guessNumber + 1}: ${target} found`;
@@ -66,10 +70,10 @@ function binarySearch() {
       console.log(`before increment bottom : ${bottom}`);
       bottom = middle + 1;
       console.log(`after increment bottom : ${bottom}`);
-      guessNumber++;
 
       newRangeLine.textContent = `\n\nNew Range: ${bottom} - ${top}`;
     } else {
+      guessNumber++;
       const tooHighLine = document.createElement("h2");
       console.log(`guess ${guessNumber}'s middle is ${middle}`);
       tooHighLine.textContent = `Guess ${guessNumber}: ${middle} - Too high`;
@@ -89,10 +93,10 @@ function binarySearch() {
       console.log(`before increment top : ${top}`);
       top = middle - 1;
       console.log(`after increment top : ${top}`);
-      guessNumber++;
       newRangeLine.textContent = `\n\nNew Range: ${bottom} - ${top}`;
     }
   }
+
   return -1;
 }
 
